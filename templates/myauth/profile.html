@@ -1,0 +1,15 @@
+{%extends "base.html" %}
+
+{% block middle %}
+{% if request.myUserId %}
+    Hello {{request.myUserId}}
+    <div>
+        <ul>
+            <li>{{name}}</li>
+            <li>{{username}}</li>
+        </ul>
+    </div>
+{%else%}
+    you not auth
+{%endif%}
+{% endblock middle %}
